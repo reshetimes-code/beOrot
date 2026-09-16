@@ -13,10 +13,10 @@ export default function AnimatedLogo() {
         <Image
           src="/logo/be-orot-logo.png"
           alt="באורות | BE-OROT"
-          width={260}
-          height={260}
+          width={390}
+          height={390}
           priority
-          className="h-36 w-36 object-contain sm:h-44 sm:w-44 md:h-52 md:w-52"
+          className="h-54 w-54 object-contain sm:h-66 sm:w-66 md:h-78 md:w-78"
         />
       </div>
     );
@@ -26,7 +26,7 @@ export default function AnimatedLogo() {
     <div className="relative flex items-center justify-center">
       <motion.div
         aria-hidden="true"
-        className="absolute h-72 w-72 rounded-full sm:h-96 sm:w-96"
+        className="absolute h-108 w-108 rounded-full sm:h-144 sm:w-144"
         initial={{ opacity: 0, scale: 0.6 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.55, ease: "easeOut" }}
@@ -39,7 +39,7 @@ export default function AnimatedLogo() {
 
       <motion.div
         aria-hidden="true"
-        className="absolute h-64 w-64 rounded-full animate-glow-pulse sm:h-80 sm:w-80"
+        className="absolute h-96 w-96 rounded-full animate-glow-pulse sm:h-120 sm:w-120"
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ scale: 1 }}
         transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
@@ -55,7 +55,7 @@ export default function AnimatedLogo() {
         transition={{ duration: 1.3, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
         className="absolute"
       >
-        <SunRaysEffect size={380} rayCount={16} opacity={0.75} spin />
+        <SunRaysEffect size={570} rayCount={16} opacity={0.75} spin />
       </motion.div>
 
       <motion.div
@@ -71,10 +71,10 @@ export default function AnimatedLogo() {
         <Image
           src="/logo/be-orot-logo.png"
           alt="באורות | BE-OROT"
-          width={260}
-          height={260}
+          width={390}
+          height={390}
           priority
-          className="relative h-36 w-36 object-contain drop-shadow-[0_0_40px_rgba(217,162,86,0.45)] sm:h-44 sm:w-44 md:h-52 md:w-52"
+          className="relative h-54 w-54 object-contain drop-shadow-[0_0_40px_rgba(217,162,86,0.45)] sm:h-66 sm:w-66 md:h-78 md:w-78"
         />
       </motion.div>
     </div>
