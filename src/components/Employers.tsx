@@ -23,10 +23,7 @@ export default function Employers() {
       <GlowOrb className="right-[-10%] top-1/3 hidden lg:block" size={480} />
 
       <div className="relative mx-auto max-w-5xl px-6 text-center">
-        <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">
-          למעסיקים
-        </span>
-        <h2 className="font-heading mt-4 text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
+        <h2 className="font-heading text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
           <RevealText text="האנשים הנכונים." as="span" />
           <br />
           <RevealText text="בזמן הנכון." as="span" delay={0.15} className="text-gradient-gold" />

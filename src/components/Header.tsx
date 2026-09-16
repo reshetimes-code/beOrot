@@ -46,13 +46,16 @@ export default function Header() {
         }`}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-8">
-          <a href="#top" className="flex items-center gap-2 gold-focus rounded">
+          <a
+            href="#top"
+            className="flex items-center gap-2 gold-focus rounded-full bg-black/35 p-1.5 backdrop-blur-sm ring-1 ring-white/10 transition-colors hover:bg-black/50"
+          >
             <Image
               src="/logo/be-orot-logo.png"
               alt="באורות | BE-OROT"
-              width={44}
-              height={44}
-              className="h-10 w-10 object-contain sm:h-11 sm:w-11"
+              width={52}
+              height={52}
+              className="h-9 w-9 object-contain drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)] sm:h-10 sm:w-10"
               priority
             />
           </a>

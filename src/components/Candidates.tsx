@@ -12,10 +12,7 @@ export default function Candidates() {
       <GlowOrb className="left-[-8%] bottom-0 hidden lg:block" size={420} color="warm" />
 
       <div className="relative mx-auto max-w-4xl px-6 text-center">
-        <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">
-          למועמדים
-        </span>
-        <h2 className="font-heading mt-4 text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
+        <h2 className="font-heading text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
           <RevealText text="לא עוד קורות חיים במערכת." as="span" />
         </h2>
         <h3 className="font-heading mt-3 text-2xl font-semibold text-gold-light sm:text-3xl">

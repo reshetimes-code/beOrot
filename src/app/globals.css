@@ -104,6 +104,16 @@ body {
   to { transform: scaleY(1); opacity: 1; }
 }
 
+@keyframes marquee-rtl {
+  from { transform: translateX(0); }
+  to { transform: translateX(50%); }
+}
+
+@keyframes marquee-ltr {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
 @keyframes underline-in {
   from { transform: scaleX(0); }
   to { transform: scaleX(1); }

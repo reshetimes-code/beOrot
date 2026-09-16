@@ -26,13 +26,13 @@ export default function AnimatedLogo() {
     <div className="relative flex items-center justify-center">
       <motion.div
         aria-hidden="true"
-        className="absolute h-108 w-108 rounded-full sm:h-144 sm:w-144"
+        className="absolute h-[36rem] w-[36rem] rounded-full sm:h-[42rem] sm:w-[42rem]"
         initial={{ opacity: 0, scale: 0.6 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.55, ease: "easeOut" }}
         style={{
           background:
-            "radial-gradient(circle, rgba(6,5,3,0.94) 0%, rgba(6,5,3,0.82) 50%, rgba(6,5,3,0) 76%)",
+            "radial-gradient(circle, rgba(4,3,2,0.97) 0%, rgba(4,3,2,0.94) 55%, rgba(4,3,2,0.55) 80%, rgba(4,3,2,0) 94%)",
           filter: "blur(2px)",
         }}
       />

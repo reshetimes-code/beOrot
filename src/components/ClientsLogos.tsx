@@ -1,5 +1,5 @@
 import { getClientLogos } from "@/lib/logos";
-import LogoGrid from "@/components/LogoGrid";
+import LogoMarquee from "@/components/LogoMarquee";
 import LightExpand from "@/components/effects/LightExpand";
 
 export default function ClientsLogos() {
@@ -24,10 +24,10 @@ export default function ClientsLogos() {
               החיבורים שכבר יצרנו בדרך.
             </p>
           </div>
+        </div>
 
-          <div className="mt-14">
-            <LogoGrid logos={logos} />
-          </div>
+        <div className="mt-14">
+          <LogoMarquee logos={logos} />
         </div>
       </section>
 
