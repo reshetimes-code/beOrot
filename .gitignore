@@ -36,6 +36,10 @@ yarn-error.log*
 # vercel
 .vercel
 
+# local tooling config (not project source)
+.docker/
+.claude/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import { ArrowDown } from "lucide-react";
 import GlowOrb from "@/components/effects/GlowOrb";
 
 const LINES = [
@@ -38,6 +39,30 @@ function Line({
       >
         {text}
       </p>
+    </motion.div>
+  );
+}
+
+function ScrollCue({
+  progress,
+}: {
+  progress: ReturnType<typeof useScroll>["scrollYProgress"];
+}) {
+  const opacity = useTransform(progress, [0.02, 0.22], [1, 0]);
+
+  return (
+    <motion.div
+      style={{ opacity }}
+      className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2"
+    >
+      <motion.div
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+        className="flex flex-col items-center gap-2 text-ink-dim"
+      >
+        <span className="text-xs tracking-widest">גללו להמשך</span>
+        <ArrowDown size={18} />
+      </motion.div>
     </motion.div>
   );
 }
@@ -85,6 +110,7 @@ export default function BrandStatement() {
             isLogo={"isLogo" in line ? line.isLogo : false}
           />
         ))}
+        <ScrollCue progress={scrollYProgress} />
       </div>
     </section>
   );
