@@ -21,12 +21,12 @@ export default function PowerLightness() {
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="text-center">
           <Reveal className="mx-auto mb-8 flex flex-col items-center gap-3">
-            <div className="relative h-28 w-28 overflow-hidden rounded-full border-2 border-gold/40 shadow-[0_0_30px_rgba(217,162,86,0.25)] sm:h-32 sm:w-32">
+            <div className="relative h-56 w-56 overflow-hidden rounded-full border-2 border-gold/40 shadow-[0_0_30px_rgba(217,162,86,0.25)] sm:h-64 sm:w-64">
               <Image
                 src="/about/meirav.jpeg"
                 alt="מירב, מייסדת באורות"
                 fill
-                sizes="128px"
+                sizes="256px"
                 className="object-cover object-top"
               />
             </div>
