@@ -55,7 +55,7 @@ export default function Header() {
               alt="באורות | BE-OROT"
               width={52}
               height={52}
-              className="h-9 w-9 object-contain sm:h-10 sm:w-10"
+              className="h-9 w-9 object-contain brightness-0 contrast-125 sm:h-10 sm:w-10"
               priority
             />
           </a>

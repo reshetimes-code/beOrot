@@ -5,11 +5,24 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import Reveal from "@/components/Reveal";
 
 const STEPS = [
-  { number: "01", title: "מבינות", text: "מקשיבות לצרכים האמיתיים של הארגון ושל התפקיד." },
-  { number: "02", title: "מאתרות", text: "סורקות שוק רחב ומאתרות את המועמדים המדויקים." },
-  { number: "03", title: "פוגשות", text: "מכירות כל מועמד באמת, מעבר לקורות החיים." },
-  { number: "04", title: "מדייקות", text: "בוחנות התאמה אמיתית בין היכולות לצורך." },
-  { number: "05", title: "מחברות", text: "יוצרות את החיבור הנכון, בזמן הנכון." },
+  {
+    number: "01",
+    title: "גיוס",
+    subtitle: "למצוא את המועמדים עם הניצוץ",
+    text: "מדיוק היכולות ועד חיבור ל-DNA שלכם - תהליך המיון וההיכרות עם השטח שלנו מייעלים את הסינון הראשוני ומבטיחים מועמדים שמתאימים בדיוק לסטנדרטים שלכם.",
+  },
+  {
+    number: "02",
+    title: "השמה",
+    subtitle: "דיוק",
+    text: "מהתאמת הצרכים ועד לחיזוק הבחירה - אנו מעניקים מעטפת ביטחון מלאה למעסיק ולמועמד כאחד. הליווי שלנו כולל דיוק של תנאי ההעסקה, העצמת התפקיד וליווי אישי צמוד עד ליום פתיחת ההכשרה.",
+  },
+  {
+    number: "03",
+    title: "הטמעה",
+    subtitle: "בהירות",
+    text: "מבניית אמון ועד להצלחה בשטח - אנו מלווים את תהליך ההטמעה כדי להבטיח תוצאות בשטח. הליווי שלנו כולל מעקב צמוד, מתן כלים ניהוליים ומקצועיים והכוונה עסקית.",
+  },
 ];
 
 export default function Method() {
@@ -27,11 +40,15 @@ export default function Method() {
       <div className="mx-auto max-w-4xl px-6">
         <div className="text-center">
           <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">
-            תהליך העבודה
+            התהליך שלנו
           </span>
           <h2 className="font-heading mt-4 text-3xl font-bold sm:text-4xl md:text-5xl">
-            איך אנחנו עובדות?
+            גיוס. השמה. הטמעה.
           </h2>
+          <p className="mx-auto mt-4 max-w-lg text-base text-ink-muted sm:text-lg">
+            מהרגע שבו הניצוץ הראשוני נדלק ועד להשתלבות והתקרקעות המלאה
+            בארגון.
+          </p>
         </div>
 
         <div ref={containerRef} className="relative mt-20">
@@ -55,6 +72,9 @@ export default function Method() {
                     <h3 className="font-heading text-xl font-bold text-ink sm:text-2xl">
                       {step.title}
                     </h3>
+                    <p className="mt-1 text-sm font-medium text-gold-light sm:text-base">
+                      {step.subtitle}
+                    </p>
                     <p className="mt-2 max-w-md text-sm leading-relaxed text-ink-muted sm:text-base">
                       {step.text}
                     </p>

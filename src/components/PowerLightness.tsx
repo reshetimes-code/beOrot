@@ -24,16 +24,21 @@ export default function PowerLightness() {
             <div className="relative h-56 w-56 overflow-hidden rounded-full border-2 border-gold/40 shadow-[0_0_30px_rgba(217,162,86,0.25)] sm:h-64 sm:w-64">
               <Image
                 src="/about/meirav.jpeg"
-                alt="מירב, מייסדת באורות"
+                alt="מירב אלהרר, מנכ״לית ובעלים באורות"
                 fill
                 sizes="256px"
                 className="object-cover object-top"
               />
             </div>
             <div>
-              <p className="font-heading font-semibold text-ink">מירב</p>
-              <p className="text-sm text-ink-dim">מייסדת באורות</p>
+              <p className="font-heading font-semibold text-ink">מירב אלהרר</p>
+              <p className="text-sm text-ink-dim">מנכ&quot;לית ובעלים, באורות</p>
             </div>
+            <p className="font-heading max-w-md text-lg italic leading-relaxed text-gold-light sm:text-xl">
+              &quot;הטכנולוגיה היא לא הפתרון, היא רק הכלי.
+              <br />
+              הלב של העסק הוא הקשר האנושי.&quot;
+            </p>
           </Reveal>
 
           <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">
