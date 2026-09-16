@@ -8,7 +8,7 @@ import LightSweep from "@/components/effects/LightSweep";
 type Status = "idle" | "loading" | "success" | "error";
 
 const inputClass =
-  "w-full rounded-xl border border-line bg-bg-soft/70 px-4 py-3.5 text-ink placeholder:text-ink-dim outline-none transition-all duration-300 focus:border-gold focus:shadow-[0_0_0_3px_rgba(217,162,86,0.15)]";
+  "w-full rounded-xl border border-white/15 bg-white/[0.07] px-4 py-3.5 text-ink placeholder:text-ink-dim outline-none transition-all duration-300 hover:border-white/25 focus:border-gold focus:bg-white/[0.1] focus:shadow-[0_0_0_3px_rgba(217,162,86,0.15)]";
 
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");

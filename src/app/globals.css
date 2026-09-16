@@ -83,8 +83,8 @@ body {
 }
 
 @keyframes glow-pulse {
-  0%, 100% { opacity: 0.55; filter: blur(28px); }
-  50% { opacity: 1; filter: blur(38px); }
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
 }
 
 @keyframes sweep {
