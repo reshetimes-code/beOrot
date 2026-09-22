@@ -3,9 +3,9 @@ import PowerLightness from "@/components/PowerLightness";
 import Stats from "@/components/Stats";
 import Method from "@/components/Method";
 import Employers from "@/components/Employers";
-import Candidates from "@/components/Candidates";
 import ClientsLogos from "@/components/ClientsLogos";
 import BrandStatement from "@/components/BrandStatement";
+import Illuminate from "@/components/Illuminate";
 import Contact from "@/components/Contact";
 
 export default function Home() {
@@ -13,11 +13,11 @@ export default function Home() {
     <>
       <Hero />
       <BrandStatement />
+      <Illuminate />
       <PowerLightness />
       <Stats />
       <Method />
       <Employers />
-      <Candidates />
       <ClientsLogos />
       <Contact />
     </>

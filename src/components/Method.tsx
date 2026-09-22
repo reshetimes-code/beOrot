@@ -39,10 +39,7 @@ export default function Method() {
     <section id="method" className="section-pad relative overflow-hidden bg-bg-soft">
       <div className="mx-auto max-w-4xl px-6">
         <div className="text-center">
-          <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">
-            התהליך שלנו
-          </span>
-          <h2 className="font-heading mt-4 text-3xl font-bold sm:text-4xl md:text-5xl">
+          <h2 className="font-heading text-3xl font-bold sm:text-4xl md:text-5xl">
             גיוס. השמה. הטמעה.
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-base text-ink-muted sm:text-lg">

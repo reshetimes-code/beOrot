@@ -10,7 +10,6 @@ const NAV_LINKS = [
   { href: "#about", label: "עוצמה וקלילות" },
   { href: "#method", label: "איך אנחנו עובדות" },
   { href: "#employers", label: "מעסיקים" },
-  { href: "#candidates", label: "מועמדים" },
   { href: "#clients", label: "לקוחות" },
   { href: "#contact", label: "צור קשר" },
 ];

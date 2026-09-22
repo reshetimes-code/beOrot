@@ -104,6 +104,15 @@ body {
   to { transform: scaleY(1); opacity: 1; }
 }
 
+@keyframes twinkle {
+  0%, 100% {
+    filter: brightness(1) drop-shadow(0 0 40px rgba(217, 162, 86, 0.45));
+  }
+  50% {
+    filter: brightness(1.3) drop-shadow(0 0 75px rgba(242, 201, 138, 0.8));
+  }
+}
+
 @keyframes marquee-rtl {
   from { transform: translateX(0); }
   to { transform: translateX(50%); }

@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import Reveal from "@/components/Reveal";
 import RevealText from "@/components/RevealText";
 import SunRaysEffect from "@/components/effects/SunRaysEffect";
+import FounderPhoto from "@/components/FounderPhoto";
 
 export default function PowerLightness() {
   const prefersReducedMotion = useReducedMotion();
@@ -21,15 +21,7 @@ export default function PowerLightness() {
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="text-center">
           <Reveal className="mx-auto mb-8 flex flex-col items-center gap-3">
-            <div className="relative h-56 w-56 overflow-hidden rounded-full border-2 border-gold/40 shadow-[0_0_30px_rgba(217,162,86,0.25)] sm:h-64 sm:w-64">
-              <Image
-                src="/about/meirav.jpeg"
-                alt="מירב אלהרר, מנכ״לית ובעלים באורות"
-                fill
-                sizes="256px"
-                className="object-cover object-top"
-              />
-            </div>
+            <FounderPhoto />
             <div>
               <p className="font-heading font-semibold text-ink">מירב אלהרר</p>
               <p className="text-sm text-ink-dim">מנכ&quot;לית ובעלים, באורות</p>
