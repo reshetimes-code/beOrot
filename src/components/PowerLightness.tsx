@@ -33,10 +33,7 @@ export default function PowerLightness() {
             </p>
           </Reveal>
 
-          <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">
-            מי אנחנו
-          </span>
-          <h2 className="font-heading mx-auto mt-4 max-w-2xl text-3xl font-bold sm:text-4xl md:text-5xl">
+          <h2 className="font-heading mx-auto max-w-2xl text-3xl font-bold sm:text-4xl md:text-5xl">
             <RevealText text="עוצמה פוגשת קלילות" as="span" />
           </h2>
         </div>
