@@ -20,7 +20,7 @@ const assistant = Assistant({
   display: "swap",
 });
 
-const siteUrl = "https://be-orot.com";
+const siteUrl = "https://be-orot.co.il";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
