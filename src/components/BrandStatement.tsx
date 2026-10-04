@@ -6,8 +6,8 @@ import { ArrowDown } from "lucide-react";
 import GlowOrb from "@/components/effects/GlowOrb";
 
 const LINES = [
-  { text: "לפני שאנשים הם נתונים, הם חיבור לשטח, לתפקיד ולארגון", range: [0, 0.08, 0.28, 0.36] },
-  { text: "גיוס טוב מתחיל בחיבור.", range: [0.3, 0.38, 0.6, 0.68] },
+  { text: "לפני שאנשים הם נתונים,", range: [0, 0.08, 0.28, 0.36] },
+  { text: "הם חיבור לשטח, לתפקיד ולארגון.", range: [0.3, 0.38, 0.6, 0.68] },
   { text: "BE-OROT", range: [0.62, 0.74, 1, 1], isLogo: true },
 ] as const;
 
