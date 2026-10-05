@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 
-export default function FloatingWhatsApp() {
+export default function FloatingWhatsApp({ whatsapp }: { whatsapp: string }) {
   const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
@@ -27,7 +27,7 @@ export default function FloatingWhatsApp() {
 
   return (
     <motion.a
-      href="https://wa.me/972502005509"
+      href={`https://wa.me/${whatsapp}`}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="דברו איתנו ב-WhatsApp"

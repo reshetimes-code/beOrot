@@ -3,29 +3,19 @@
 import { useRef } from "react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import Reveal from "@/components/Reveal";
+import type { Texts } from "@/lib/content";
 
-const STEPS = [
-  {
-    number: "01",
-    title: "גיוס",
-    subtitle: "למצוא את המועמדים עם הניצוץ",
-    text: "מדיוק היכולות ועד חיבור ל-DNA שלכם - תהליך המיון וההיכרות עם השטח שלנו מייעלים את הסינון הראשוני ומבטיחים מועמדים שמתאימים בדיוק לסטנדרטים שלכם.",
-  },
-  {
-    number: "02",
-    title: "השמה",
-    subtitle: "דיוק",
-    text: "מהתאמת הצרכים ועד לחיזוק הבחירה - אנו מעניקים מעטפת ביטחון מלאה למעסיק ולמועמד כאחד. הליווי שלנו כולל דיוק של תנאי ההעסקה, העצמת התפקיד וליווי אישי צמוד עד ליום פתיחת ההכשרה.",
-  },
-  {
-    number: "03",
-    title: "הטמעה",
-    subtitle: "בהירות",
-    text: "מבניית אמון ועד להצלחה בשטח - אנו מלווים את תהליך ההטמעה כדי להבטיח תוצאות בשטח. הליווי שלנו כולל מעקב צמוד, מתן כלים ניהוליים ומקצועיים והכוונה עסקית.",
-  },
-];
+function buildSteps(t: Texts) {
+  return [1, 2, 3].map((n) => ({
+    number: `0${n}`,
+    title: t[`method.${n}.title` as keyof Texts],
+    subtitle: t[`method.${n}.subtitle` as keyof Texts],
+    text: t[`method.${n}.text` as keyof Texts],
+  }));
+}
 
-export default function Method() {
+export default function Method({ t }: { t: Texts }) {
+  const STEPS = buildSteps(t);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({
@@ -40,11 +30,10 @@ export default function Method() {
       <div className="mx-auto max-w-4xl px-6">
         <div className="text-center">
           <h2 className="font-heading text-3xl font-bold sm:text-4xl md:text-5xl">
-            גיוס. השמה. הטמעה.
+            {t["method.title"]}
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-base text-ink-muted sm:text-lg">
-            מהרגע שבו הניצוץ הראשוני נדלק ועד להשתלבות והתקרקעות המלאה
-            בארגון.
+            {t["method.text"]}
           </p>
         </div>
 

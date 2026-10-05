@@ -5,8 +5,9 @@ import { ArrowDown } from "lucide-react";
 import AnimatedLogo from "@/components/AnimatedLogo";
 import MagneticButton from "@/components/MagneticButton";
 import GlowOrb from "@/components/effects/GlowOrb";
+import type { Texts } from "@/lib/content";
 
-export default function Hero() {
+export default function Hero({ t }: { t: Texts }) {
   return (
     <section
       id="top"
@@ -43,7 +44,8 @@ export default function Hero() {
             transition={{ duration: 0.9, delay: 1.15, ease: [0.16, 1, 0.3, 1] }}
             className="font-heading mt-6 text-4xl font-bold leading-tight text-ink sm:text-5xl md:text-6xl"
           >
-            עוצמה שפוגשת <span className="text-gradient-gold">אנשים</span>.
+            {t["hero.title.pre"]}{" "}
+            <span className="text-gradient-gold">{t["hero.title.highlight"]}</span>.
           </motion.h1>
 
           <motion.p
@@ -52,7 +54,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 1.4, ease: [0.16, 1, 0.3, 1] }}
             className="font-heading mt-4 text-lg font-semibold text-gold-light drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)] sm:text-xl"
           >
-            עוצמה פוגשת קלילות
+            {t["hero.tagline"]}
           </motion.p>
 
           <motion.p
@@ -61,7 +63,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 1.55, ease: [0.16, 1, 0.3, 1] }}
             className="mt-4 max-w-xl text-balance text-base leading-relaxed text-ink-muted drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] sm:text-lg"
           >
-            אנחנו מחברות בין אנשים, הזדמנויות וארגונים בדרך מדויקת, מהירה ואנושית יותר.
+            {t["hero.text"]}
           </motion.p>
 
           <motion.div
@@ -74,7 +76,7 @@ export default function Hero() {
               href="#contact"
               className="bg-gold text-[#150f06] shadow-[0_0_30px_rgba(217,162,86,0.35)] hover:shadow-[0_0_45px_rgba(217,162,86,0.55)]"
             >
-              מחפשים עובדים? דברו איתנו
+              {t["hero.cta"]}
             </MagneticButton>
           </motion.div>
         </div>

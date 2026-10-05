@@ -26,6 +26,7 @@ export default function LogoCard({ logo }: { logo: ClientLogo }) {
           src={logo.src}
           alt={logo.alt}
           fill
+          unoptimized={logo.upload}
           sizes="(max-width: 767px) 40vw, (max-width: 1023px) 22vw, 15vw"
           className="object-contain p-1 transition-opacity duration-300 group-hover:opacity-100"
           loading="lazy"

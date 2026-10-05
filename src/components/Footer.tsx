@@ -1,6 +1,7 @@
 import Image from "next/image";
+import type { Texts } from "@/lib/content";
 
-export default function Footer() {
+export default function Footer({ t }: { t: Texts }) {
   return (
     <footer className="relative border-t border-line bg-bg py-10">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-6 text-center sm:flex-row sm:justify-between sm:text-right">
@@ -19,17 +20,17 @@ export default function Footer() {
 
         <div className="flex flex-col items-center gap-1 text-sm text-ink-dim sm:items-end">
           <a
-            href="mailto:meirav@be-orot.com"
+            href={`mailto:${t["contact.email"]}`}
             className="animated-underline text-ink-dim transition-colors hover:text-gold-light"
           >
-            meirav@be-orot.com
+            {t["contact.email"]}
           </a>
           <a
-            href="https://wa.me/972502005509"
+            href={`https://wa.me/${t["contact.whatsapp"]}`}
             className="animated-underline text-ink-dim transition-colors hover:text-gold-light"
             dir="ltr"
           >
-            +972 50-200-5509
+            {t["contact.phone"]}
           </a>
         </div>
 

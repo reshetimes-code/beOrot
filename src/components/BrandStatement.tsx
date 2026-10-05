@@ -4,12 +4,15 @@ import { useRef } from "react";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import GlowOrb from "@/components/effects/GlowOrb";
+import type { Texts } from "@/lib/content";
 
-const LINES = [
-  { text: "לפני שאנשים הם נתונים", range: [0, 0.08, 0.28, 0.36] },
-  { text: "הם חיבור לשטח, לתפקיד ולארגון", range: [0.3, 0.38, 0.6, 0.68] },
-  { text: "BE-OROT", range: [0.62, 0.74, 1, 1], isLogo: true },
-] as const;
+function buildLines(t: Texts) {
+  return [
+    { text: t["brand.line1"], range: [0, 0.08, 0.28, 0.36] },
+    { text: t["brand.line2"], range: [0.3, 0.38, 0.6, 0.68] },
+    { text: t["brand.logo"], range: [0.62, 0.74, 1, 1], isLogo: true },
+  ] as const;
+}
 
 function Line({
   text,
@@ -67,7 +70,8 @@ function ScrollCue({
   );
 }
 
-export default function BrandStatement() {
+export default function BrandStatement({ t }: { t: Texts }) {
+  const LINES = buildLines(t);
   const containerRef = useRef<HTMLDivElement>(null);
   const prefersReducedMotion = useReducedMotion();
   const { scrollYProgress } = useScroll({

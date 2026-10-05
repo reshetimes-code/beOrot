@@ -1,9 +1,10 @@
 import { getClientLogos } from "@/lib/logos";
 import LogoMarquee from "@/components/LogoMarquee";
 import LightExpand from "@/components/effects/LightExpand";
+import type { Texts } from "@/lib/content";
 
-export default function ClientsLogos() {
-  const logos = getClientLogos();
+export default async function ClientsLogos({ t }: { t: Texts }) {
+  const logos = await getClientLogos();
 
   if (logos.length === 0) return null;
 
@@ -15,13 +16,13 @@ export default function ClientsLogos() {
         <div className="mx-auto max-w-6xl px-6">
           <div className="text-center">
             <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold-dim">
-              לקוחות
+              {t["clients.label"]}
             </span>
             <h2 className="font-heading mt-4 text-3xl font-bold text-[#1a1610] sm:text-4xl md:text-5xl">
-              חברות שכבר עבדו איתנו
+              {t["clients.title"]}
             </h2>
             <p className="mx-auto mt-3 max-w-md text-base text-[#5a5248]">
-              החיבורים שכבר יצרנו בדרך.
+              {t["clients.text"]}
             </p>
           </div>
         </div>

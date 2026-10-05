@@ -5,8 +5,9 @@ import Reveal from "@/components/Reveal";
 import RevealText from "@/components/RevealText";
 import SunRaysEffect from "@/components/effects/SunRaysEffect";
 import FounderPhoto from "@/components/FounderPhoto";
+import type { Texts } from "@/lib/content";
 
-export default function PowerLightness() {
+export default function PowerLightness({ t }: { t: Texts }) {
   const prefersReducedMotion = useReducedMotion();
 
   return (
@@ -23,18 +24,18 @@ export default function PowerLightness() {
           <Reveal className="mx-auto mb-8 flex flex-col items-center gap-3">
             <FounderPhoto />
             <div>
-              <p className="font-heading font-semibold text-ink">מירב אלהרר</p>
-              <p className="text-sm text-ink-dim">מנכ&quot;לית ובעלים, באורות</p>
+              <p className="font-heading font-semibold text-ink">{t["founder.name"]}</p>
+              <p className="text-sm text-ink-dim">{t["founder.role"]}</p>
             </div>
             <p className="font-heading max-w-md text-lg italic leading-relaxed text-gold-light sm:text-xl">
-              &quot;הטכנולוגיה היא לא הפתרון, היא רק הכלי.
+              &quot;{t["founder.quote1"]}
               <br />
-              הלב של העסק הוא הקשר האנושי.&quot;
+              {t["founder.quote2"]}&quot;
             </p>
           </Reveal>
 
           <h2 className="font-heading mx-auto max-w-2xl text-3xl font-bold sm:text-4xl md:text-5xl">
-            <RevealText text="עוצמה פוגשת קלילות" as="span" />
+            <RevealText text={t["power.heading"]} as="span" />
           </h2>
         </div>
 
@@ -42,11 +43,10 @@ export default function PowerLightness() {
           <Reveal direction="right" className="md:pl-12">
             <div className="rounded-3xl border border-line bg-bg-soft/60 p-8 backdrop-blur-sm sm:p-10">
               <h3 className="font-heading text-2xl font-bold text-gold-light sm:text-3xl">
-                עוצמה
+                {t["power.left.title"]}
               </h3>
               <p className="mt-5 text-base leading-relaxed text-ink-muted sm:text-lg">
-                היכולת להגיע לייעוד, לפתוח שווקים, להביא מאסות של מועמדים איכותיים
-                ולייצר נוכחות חזקה עבור המעסיק.
+                {t["power.left.text"]}
               </p>
             </div>
           </Reveal>
@@ -72,12 +72,10 @@ export default function PowerLightness() {
           <Reveal direction="left" delay={0.15} className="md:pr-12">
             <div className="rounded-3xl border border-line bg-bg-soft/60 p-8 backdrop-blur-sm sm:p-10">
               <h3 className="font-heading text-2xl font-bold text-gold-light sm:text-3xl">
-                קלילות ודיוק אנושי
+                {t["power.right.title"]}
               </h3>
               <p className="mt-5 text-base leading-relaxed text-ink-muted sm:text-lg">
-                אנחנו לא מסתפקות בסינון אלגוריתמי. כל מועמד עובר דרכנו מענה
-                אנושי, בחינת היכולות, הדרייב וה&quot;טיפ&quot; הייחודי שלו. הגיוס
-                נעשה בחיבור קל, מהיר ובאמינות שקופה.
+                {t["power.right.text"]}
               </p>
             </div>
           </Reveal>

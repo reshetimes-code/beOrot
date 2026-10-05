@@ -44,6 +44,7 @@ function MarqueeRow({
                 src={logo.src}
                 alt={logo.alt}
                 fill
+                unoptimized={logo.upload}
                 sizes="192px"
                 className="object-contain p-1"
                 loading="lazy"

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Rubik, Assistant } from "next/font/google";
 import "./globals.css";
+import { getTexts } from "@/lib/content";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
@@ -81,7 +82,9 @@ const organizationSchema = {
   sameAs: [],
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default async function RootLayout({ children }: LayoutProps<"/">) {
+  const t = await getTexts();
+
   return (
     <html
       lang="he"
@@ -96,8 +99,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <CursorGlow />
         <Header />
         <main className="flex-1">{children}</main>
-        <Footer />
-        <FloatingWhatsApp />
+        <Footer t={t} />
+        <FloatingWhatsApp whatsapp={t["contact.whatsapp"]} />
       </body>
     </html>
   );

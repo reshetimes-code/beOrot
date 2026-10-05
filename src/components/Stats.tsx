@@ -3,13 +3,15 @@
 import { useEffect, useRef, useState } from "react";
 import { useInView, useReducedMotion } from "framer-motion";
 import Reveal from "@/components/Reveal";
+import type { Texts } from "@/lib/content";
 
-const STATS = [
-  { value: 17, suffix: "+", label: "שנות ניסיון בריטייל" },
-  { value: 35, suffix: "", label: "מותגים מובילים" },
-  { value: 5000, suffix: "+", label: "מועמדים במאגר" },
-  { value: 3, suffix: "", label: "פעימות סינון לכל מועמד" },
-];
+function buildStats(t: Texts) {
+  return [1, 2, 3, 4].map((n) => {
+    const k = (field: "value" | "suffix" | "label") =>
+      t[`stats.${n}.${field}` as keyof Texts];
+    return { value: Number(k("value")) || 0, suffix: k("suffix"), label: k("label") };
+  });
+}
 
 function Counter({ value, suffix }: { value: number; suffix: string }) {
   const ref = useRef<HTMLSpanElement>(null);
@@ -42,7 +44,8 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
   );
 }
 
-export default function Stats() {
+export default function Stats({ t }: { t: Texts }) {
+  const STATS = buildStats(t);
   return (
     <section className="relative overflow-hidden bg-bg-soft py-14 sm:py-16">
       <div className="mx-auto max-w-5xl px-6">
