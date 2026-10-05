@@ -1,4 +1,5 @@
 import { readJson, writeJson } from "@/lib/store";
+import { validateTexts, type FieldErrors } from "@/lib/validate";
 
 type Field = {
   key: string;
@@ -110,11 +111,15 @@ export async function getTexts(): Promise<Texts> {
   return texts;
 }
 
-export async function saveTexts(input: Record<string, unknown>): Promise<void> {
+/** שומר את הטקסטים אם הם תקינים; אחרת מחזיר שגיאות לפי שדה ולא כותב כלום. */
+export async function saveTexts(input: Record<string, unknown>): Promise<FieldErrors | null> {
+  const errors = validateTexts(input, FIELDS);
+  if (Object.keys(errors).length > 0) return errors;
+
   const clean: Partial<Texts> = {};
   for (const key of Object.keys(DEFAULT_TEXTS) as TextKey[]) {
-    const v = input[key];
-    if (typeof v === "string") clean[key] = v.slice(0, 2000);
+    clean[key] = (input[key] as string).trim();
   }
   await writeJson(FILE, clean);
+  return null;
 }

@@ -33,7 +33,7 @@ export default async function AdminPage() {
   }
 
   return (
-    <div className="fixed inset-0 z-[100] overflow-y-auto bg-bg px-4 py-10 text-ink">
+    <div className="fixed inset-0 z-[100] overflow-y-auto bg-bg px-4 py-6 text-ink sm:py-10">
       <div className="mx-auto max-w-3xl">{content}</div>
     </div>
   );

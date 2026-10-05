@@ -164,3 +164,9 @@ body {
     scroll-behavior: auto;
   }
 }
+
+/* SweetAlert2 (admin): RTL list + large touch-friendly buttons */
+.admin-swal { width: min(92vw, 32rem) !important; font-family: inherit; }
+.admin-swal-list { margin: 0; padding: 0 1.25rem 0 0; text-align: right; line-height: 1.6; font-size: 0.95rem; }
+.admin-swal-list li + li { margin-top: 0.5rem; }
+.admin-swal-btn { min-height: 48px; min-width: 96px; font-size: 1rem !important; }
